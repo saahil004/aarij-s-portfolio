@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
   },
+  async redirects() {
+    return [{ source: '/favicon.ico', destination: '/icon.svg', permanent: true }];
+  },
 };
 
 export default nextConfig;

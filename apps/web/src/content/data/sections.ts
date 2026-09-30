@@ -80,7 +80,7 @@ export const sections: SectionRecord[] = [
   {
     key: 'expertise',
     isVisible: true,
-    sortOrder: 4,
+    sortOrder: 8,
     content: {
       title: 'Value-focused marketing that delivers.',
       intro:
@@ -128,7 +128,7 @@ export const sections: SectionRecord[] = [
   {
     key: 'results',
     isVisible: true,
-    sortOrder: 5,
+    sortOrder: 4,
     content: {
       title: 'My numbers say it all',
       intro:
@@ -138,7 +138,7 @@ export const sections: SectionRecord[] = [
   {
     key: 'caseStudies',
     isVisible: true,
-    sortOrder: 6,
+    sortOrder: 5,
     content: {
       title: 'Growth stories, measured in results.',
       intro:
@@ -149,13 +149,13 @@ export const sections: SectionRecord[] = [
   {
     key: 'brands',
     isVisible: true,
-    sortOrder: 7,
+    sortOrder: 6,
     content: { title: "Brands I've worked with" },
   },
   {
     key: 'process',
     isVisible: true,
-    sortOrder: 8,
+    sortOrder: 7,
     content: {
       title: 'How I grow a business through digital marketing.',
       intro:
@@ -198,7 +198,7 @@ export const sections: SectionRecord[] = [
   {
     key: 'framework',
     isVisible: true,
-    sortOrder: 9,
+    sortOrder: 11,
     content: {
       title: 'My 90-day growth framework.',
       intro:
@@ -251,7 +251,7 @@ export const sections: SectionRecord[] = [
   {
     key: 'tools',
     isVisible: true,
-    sortOrder: 10,
+    sortOrder: 9,
     content: {
       title: 'My marketing technology stack.',
       intro:
@@ -261,7 +261,7 @@ export const sections: SectionRecord[] = [
   {
     key: 'beforeAfter',
     isVisible: true,
-    sortOrder: 11,
+    sortOrder: 10,
     content: {
       title: 'Before & after.',
       intro:

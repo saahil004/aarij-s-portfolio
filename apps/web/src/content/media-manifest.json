@@ -340,8 +340,8 @@
     "bg": "#ffffff"
   },
   "tools/google-ads.webp": {
-    "width": 400,
-    "height": 500,
+    "width": 396,
+    "height": 496,
     "bg": "#ffffff"
   },
   "tools/google-analytics.webp": {
@@ -356,7 +356,7 @@
   },
   "tools/klaviyo.webp": {
     "width": 480,
-    "height": 296,
+    "height": 143,
     "bg": "#ffffff"
   },
   "tools/meta.webp": {
@@ -386,7 +386,7 @@
   },
   "tools/tiktok-shop.webp": {
     "width": 480,
-    "height": 540,
+    "height": 537,
     "bg": "#000000"
   }
 }

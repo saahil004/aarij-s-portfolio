@@ -42,7 +42,16 @@ async function processOne(source: MediaSource): Promise<ManifestEntry> {
   if (source.kind === 'logo') {
     // Crop surrounding padding so every mark sits at a consistent size, then pick the
     // tile color from the cropped corners (e.g. a gold logo on a black box → black tile).
-    const canvasBg = cornerBackground(await readCorners(input));
+    let canvasBg = cornerBackground(await readCorners(input));
+    if (canvasBg) {
+      // Opaque canvases sometimes carry a 1px frame (e.g. klaviyo.png) that blocks trimming.
+      const { width = 0, height = 0 } = await sharp(buffer).metadata();
+      buffer = await sharp(buffer)
+        .extract({ left: 2, top: 2, width: width - 4, height: height - 4 })
+        .png()
+        .toBuffer();
+      canvasBg = cornerBackground(await readCorners(buffer));
+    }
     try {
       buffer = await sharp(buffer)
         .trim({ ...(canvasBg ? { background: canvasBg } : {}), threshold: 18 })
