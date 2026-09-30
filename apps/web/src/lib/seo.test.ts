@@ -65,6 +65,14 @@ describe('buildMetadata', () => {
     expect(metadata.twitter).toMatchObject({ card: 'summary_large_image' });
   });
 
+  it('falls back to the site social card when a page has no image', () => {
+    const metadata = buildMetadata({ title: 'Privacy', description: 'd', path: '/privacy' });
+    expect(metadata.openGraph).toMatchObject({
+      images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
+    });
+    expect(metadata.twitter).toMatchObject({ images: ['/opengraph-image'] });
+  });
+
   it('can bypass the title template', () => {
     expect(
       buildMetadata({ title: 'Full title', description: 'd', path: '/', absoluteTitle: true })

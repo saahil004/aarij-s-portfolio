@@ -8,7 +8,7 @@ export function RotatingBadge({ text }: { text: string }) {
     <Link
       href="/#contact"
       data-rotating-badge
-      aria-label="Get in touch"
+      aria-label={text}
       className="fixed right-3 bottom-3 z-40 flex size-17 items-center justify-center rounded-full border border-ink bg-yellow transition-transform duration-300 hover:scale-105 md:right-6 md:bottom-6 md:size-24"
     >
       <svg
