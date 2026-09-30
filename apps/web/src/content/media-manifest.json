@@ -1,0 +1,392 @@
+{
+  "brands/analytix.webp": {
+    "width": 312,
+    "height": 69,
+    "bg": null
+  },
+  "brands/archentire.webp": {
+    "width": 480,
+    "height": 141,
+    "bg": null
+  },
+  "brands/arena-multimedia.webp": {
+    "width": 301,
+    "height": 180,
+    "bg": "#ffffff"
+  },
+  "brands/bullseye.webp": {
+    "width": 247,
+    "height": 145,
+    "bg": "#ffffff"
+  },
+  "brands/cafe-imran.webp": {
+    "width": 294,
+    "height": 151,
+    "bg": "#050505"
+  },
+  "brands/charity-right.webp": {
+    "width": 287,
+    "height": 108,
+    "bg": "#fcfcfb"
+  },
+  "brands/edhi-foundation.webp": {
+    "width": 384,
+    "height": 105,
+    "bg": null
+  },
+  "brands/escience-academy.webp": {
+    "width": 235,
+    "height": 118,
+    "bg": null
+  },
+  "brands/gfxm.webp": {
+    "width": 149,
+    "height": 149,
+    "bg": "#ffffff"
+  },
+  "brands/livebits.webp": {
+    "width": 300,
+    "height": 104,
+    "bg": null
+  },
+  "brands/mussarat.webp": {
+    "width": 480,
+    "height": 179,
+    "bg": null
+  },
+  "brands/publishing-squad.webp": {
+    "width": 480,
+    "height": 287,
+    "bg": null
+  },
+  "brands/pulp-house-publishing.webp": {
+    "width": 462,
+    "height": 414,
+    "bg": "#ffffff"
+  },
+  "brands/rameen-naturals.webp": {
+    "width": 321,
+    "height": 287,
+    "bg": "#ffffff"
+  },
+  "brands/saltanat.webp": {
+    "width": 294,
+    "height": 151,
+    "bg": "#050505"
+  },
+  "brands/the-jacket-maker.webp": {
+    "width": 265,
+    "height": 150,
+    "bg": null
+  },
+  "brands/timezone.webp": {
+    "width": 173,
+    "height": 56,
+    "bg": "#000000"
+  },
+  "brands/trendy-jacket.webp": {
+    "width": 480,
+    "height": 107,
+    "bg": null
+  },
+  "brands/urban-quill.webp": {
+    "width": 480,
+    "height": 176,
+    "bg": null
+  },
+  "brands/usa-leather-jackets.webp": {
+    "width": 480,
+    "height": 185,
+    "bg": null
+  },
+  "brands/william-jacket.webp": {
+    "width": 344,
+    "height": 77,
+    "bg": null
+  },
+  "evidence/ahrefs-goldfish-organic-growth.webp": {
+    "width": 953,
+    "height": 459,
+    "bg": null
+  },
+  "evidence/ahrefs-goldfish-top-pages.webp": {
+    "width": 1600,
+    "height": 418,
+    "bg": null
+  },
+  "evidence/ahrefs-growth-2-years.webp": {
+    "width": 1058,
+    "height": 507,
+    "bg": null
+  },
+  "evidence/ahrefs-livebits-keywords.webp": {
+    "width": 1069,
+    "height": 393,
+    "bg": null
+  },
+  "evidence/ahrefs-organic-traffic-6-months.webp": {
+    "width": 952,
+    "height": 466,
+    "bg": null
+  },
+  "evidence/ahrefs-vanquishe-keywords.webp": {
+    "width": 1066,
+    "height": 396,
+    "bg": null
+  },
+  "evidence/backlink-strategy-map.webp": {
+    "width": 1279,
+    "height": 720,
+    "bg": null
+  },
+  "evidence/core-web-vitals-passed.webp": {
+    "width": 1019,
+    "height": 678,
+    "bg": null
+  },
+  "evidence/ga4-livebits.webp": {
+    "width": 1600,
+    "height": 769,
+    "bg": null
+  },
+  "evidence/ga4-mussarat-lingerie.webp": {
+    "width": 1600,
+    "height": 764,
+    "bg": null
+  },
+  "evidence/gbp-archentire-performance.webp": {
+    "width": 966,
+    "height": 792,
+    "bg": null
+  },
+  "evidence/gbp-archentire-profile.webp": {
+    "width": 388,
+    "height": 748,
+    "bg": null
+  },
+  "evidence/google-shopping-red-biker-jacket.webp": {
+    "width": 1207,
+    "height": 556,
+    "bg": null
+  },
+  "evidence/google-shopping-trendy-jacket.webp": {
+    "width": 1208,
+    "height": 562,
+    "bg": null
+  },
+  "evidence/influencer-trendy-jacket-men.webp": {
+    "width": 843,
+    "height": 543,
+    "bg": null
+  },
+  "evidence/influencer-trendy-jacket-women.webp": {
+    "width": 608,
+    "height": 539,
+    "bg": null
+  },
+  "evidence/instagram-timezone.webp": {
+    "width": 670,
+    "height": 861,
+    "bg": null
+  },
+  "evidence/instagram-trendy-jacket.webp": {
+    "width": 494,
+    "height": 666,
+    "bg": null
+  },
+  "evidence/lead-converting-blog-page.webp": {
+    "width": 744,
+    "height": 834,
+    "bg": null
+  },
+  "evidence/pagespeed-evoltciti.webp": {
+    "width": 974,
+    "height": 650,
+    "bg": null
+  },
+  "evidence/pagespeed-livebits.webp": {
+    "width": 975,
+    "height": 630,
+    "bg": null
+  },
+  "evidence/pagespeed-scores.webp": {
+    "width": 1031,
+    "height": 253,
+    "bg": null
+  },
+  "evidence/search-console-12-months-a.webp": {
+    "width": 1515,
+    "height": 592,
+    "bg": null
+  },
+  "evidence/search-console-12-months-b.webp": {
+    "width": 1519,
+    "height": 717,
+    "bg": null
+  },
+  "evidence/search-console-12-months-c.webp": {
+    "width": 1519,
+    "height": 583,
+    "bg": null
+  },
+  "evidence/search-console-3-months-a.webp": {
+    "width": 1565,
+    "height": 559,
+    "bg": null
+  },
+  "evidence/search-console-3-months-b.webp": {
+    "width": 1568,
+    "height": 557,
+    "bg": null
+  },
+  "evidence/search-console-6-months-a.webp": {
+    "width": 1568,
+    "height": 557,
+    "bg": null
+  },
+  "evidence/search-console-6-months-b.webp": {
+    "width": 1567,
+    "height": 560,
+    "bg": null
+  },
+  "evidence/semrush-authority-overview.webp": {
+    "width": 1170,
+    "height": 540,
+    "bg": null
+  },
+  "evidence/semrush-paragon-jackets.webp": {
+    "width": 1139,
+    "height": 672,
+    "bg": null
+  },
+  "evidence/serp-archentire-architects.webp": {
+    "width": 1568,
+    "height": 743,
+    "bg": null
+  },
+  "evidence/serp-livebits-b2b-web-design.webp": {
+    "width": 1568,
+    "height": 780,
+    "bg": null
+  },
+  "evidence/serp-livebits-custom-web-development.webp": {
+    "width": 1564,
+    "height": 784,
+    "bg": null
+  },
+  "evidence/serp-livebits-founder-snippet.webp": {
+    "width": 1568,
+    "height": 771,
+    "bg": null
+  },
+  "evidence/serp-livebits-influencer-marketing.webp": {
+    "width": 1568,
+    "height": 783,
+    "bg": null
+  },
+  "evidence/serp-livebits-short-video-ads.webp": {
+    "width": 1568,
+    "height": 695,
+    "bg": null
+  },
+  "evidence/serp-mussarat-shapewear.webp": {
+    "width": 1568,
+    "height": 768,
+    "bg": null
+  },
+  "evidence/shopify-store-a-365-days.webp": {
+    "width": 1491,
+    "height": 365,
+    "bg": null
+  },
+  "evidence/shopify-store-b-365-days.webp": {
+    "width": 1568,
+    "height": 424,
+    "bg": null
+  },
+  "evidence/topic-cluster-model.webp": {
+    "width": 1080,
+    "height": 804,
+    "bg": null
+  },
+  "evidence/trendy-jacket-brand-serp.webp": {
+    "width": 1251,
+    "height": 917,
+    "bg": null
+  },
+  "evidence/uae-leads-dashboard.webp": {
+    "width": 1568,
+    "height": 574,
+    "bg": null
+  },
+  "tools/ahrefs.webp": {
+    "width": 480,
+    "height": 135,
+    "bg": "#000000"
+  },
+  "tools/canva.webp": {
+    "width": 480,
+    "height": 480,
+    "bg": "#ffffff"
+  },
+  "tools/chatgpt.webp": {
+    "width": 480,
+    "height": 487,
+    "bg": "#ffffff"
+  },
+  "tools/claude.webp": {
+    "width": 480,
+    "height": 103,
+    "bg": "#ffffff"
+  },
+  "tools/google-ads.webp": {
+    "width": 400,
+    "height": 500,
+    "bg": "#ffffff"
+  },
+  "tools/google-analytics.webp": {
+    "width": 480,
+    "height": 165,
+    "bg": "#000000"
+  },
+  "tools/google-search-console.webp": {
+    "width": 480,
+    "height": 480,
+    "bg": null
+  },
+  "tools/klaviyo.webp": {
+    "width": 480,
+    "height": 296,
+    "bg": "#ffffff"
+  },
+  "tools/meta.webp": {
+    "width": 480,
+    "height": 104,
+    "bg": null
+  },
+  "tools/microsoft-clarity.webp": {
+    "width": 433,
+    "height": 140,
+    "bg": "#fffffe"
+  },
+  "tools/screaming-frog.webp": {
+    "width": 393,
+    "height": 416,
+    "bg": "#ffffff"
+  },
+  "tools/semrush.webp": {
+    "width": 480,
+    "height": 114,
+    "bg": "#181e15"
+  },
+  "tools/surfer-seo.webp": {
+    "width": 449,
+    "height": 82,
+    "bg": null
+  },
+  "tools/tiktok-shop.webp": {
+    "width": 480,
+    "height": 540,
+    "bg": "#000000"
+  }
+}
