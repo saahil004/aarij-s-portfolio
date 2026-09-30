@@ -47,6 +47,9 @@ test('publishes structured data for Aarij', async ({ page }) => {
 });
 
 test('has no serious accessibility violations', async ({ page }) => {
+  // Scan the settled page, not elements caught mid-animation.
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.reload();
   const results = await new AxeBuilder({ page }).analyze();
   const serious = results.violations.filter((v) =>
     ['serious', 'critical'].includes(v.impact ?? ''),

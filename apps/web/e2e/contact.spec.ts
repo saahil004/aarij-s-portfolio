@@ -36,6 +36,13 @@ test('explains that messages cannot be sent until the API is connected', async (
   await expect(form.getByRole('alert')).toContainText("can't be sent right now");
 });
 
+test("opens the form from the header's Let's Talk link", async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('banner').getByRole('link', { name: "Let's Talk" }).click();
+  await expect(page).toHaveURL(/#contact$/);
+  await expect(page.getByRole('form', { name: 'Contact form' })).toBeVisible();
+});
+
 test('opens the form when arriving on #contact', async ({ page }) => {
   await page.goto('/#contact');
   await expect(page.getByRole('form', { name: 'Contact form' })).toBeVisible();

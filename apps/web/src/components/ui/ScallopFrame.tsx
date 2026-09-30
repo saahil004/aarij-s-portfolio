@@ -18,6 +18,8 @@ type ScallopFrameProps = {
   priority?: boolean;
   sizes?: string;
   className?: string;
+  /** Adds a color panel the motion layer slides away to reveal the photo. */
+  curtain?: boolean;
 };
 
 export function ScallopFrame({
@@ -27,9 +29,10 @@ export function ScallopFrame({
   priority = false,
   sizes = '(min-width: 1024px) 26rem, 70vw',
   className,
+  curtain = false,
 }: ScallopFrameProps) {
   return (
-    <div className={cn('relative aspect-[4/5] w-full', className)}>
+    <div data-scallop className={cn('relative aspect-4/5 w-full', className)}>
       <svg width="0" height="0" className="absolute" aria-hidden="true" focusable="false">
         <defs>
           <clipPath id={clipId} clipPathUnits="objectBoundingBox">
@@ -61,6 +64,13 @@ export function ScallopFrame({
               {fallbackLabel.charAt(0)}
             </span>
           </div>
+        )}
+        {curtain && (
+          <div
+            aria-hidden="true"
+            data-scallop-curtain
+            className="absolute inset-0 hidden bg-yellow"
+          />
         )}
       </div>
 

@@ -42,6 +42,7 @@ test('returns a 404 page for an unknown case study', async ({ page }) => {
 });
 
 test('case study page has no serious accessibility violations', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/case-studies/archentire');
   const results = await new AxeBuilder({ page }).analyze();
   const serious = results.violations.filter((v) =>

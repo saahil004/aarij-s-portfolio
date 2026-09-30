@@ -72,6 +72,14 @@ describe('local content data', () => {
     expect(new Set(postSlugs).size).toBe(postSlugs.length);
   });
 
+  it('points hero proof badges at existing metrics', () => {
+    const hero = contentData.sections.find((s) => s.key === 'hero');
+    const metricIds = new Set(contentData.metrics.map((m) => m.id));
+    const ids = hero?.key === 'hero' ? hero.content.proofMetricIds : [];
+    expect(ids.length).toBeGreaterThan(0);
+    for (const id of ids) expect(metricIds.has(id), id).toBe(true);
+  });
+
   it('assigns every post to an existing category', () => {
     const categories = new Set(contentData.categories.map((c) => c.slug));
     for (const post of contentData.posts) expect(categories.has(post.categorySlug)).toBe(true);

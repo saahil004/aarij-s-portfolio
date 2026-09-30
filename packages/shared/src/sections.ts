@@ -22,6 +22,8 @@ export const sectionSchemas = {
     highlight: text(30),
     subheadline: text(300),
     stickers: z.array(text(30)).max(2),
+    /** Metric ids shown as floating proof badges around the portrait. */
+    proofMetricIds: z.array(text(64)).max(2),
     primaryCta: ctaSchema,
     resumeCtaLabel: text(40),
   }),

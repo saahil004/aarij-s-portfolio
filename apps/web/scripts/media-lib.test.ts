@@ -1,6 +1,12 @@
 // @vitest-environment node
 import { describe, expect, it } from 'vitest';
-import { cornerBackground, targetWidth, toHex, uniformBackground } from './media-lib';
+import {
+  cornerBackground,
+  firstExisting,
+  targetWidth,
+  toHex,
+  uniformBackground,
+} from './media-lib';
 
 const white = { r: 255, g: 255, b: 255, a: 255 };
 const black = { r: 0, g: 0, b: 0, a: 255 };
@@ -37,10 +43,29 @@ describe('uniformBackground', () => {
   });
 });
 
+describe('firstExisting', () => {
+  it('returns the first candidate that exists', () => {
+    const files = new Set(['portrait/aarij.png', 'portrait/aarij.webp']);
+    expect(
+      firstExisting(['portrait/aarij.jpg', 'portrait/aarij.png', 'portrait/aarij.webp'], (p) =>
+        files.has(p),
+      ),
+    ).toBe('portrait/aarij.png');
+  });
+
+  it('returns null when none exist', () => {
+    expect(firstExisting(['a.jpg'], () => false)).toBeNull();
+  });
+});
+
 describe('targetWidth', () => {
   it('caps logos at 480px and screenshots at 1600px', () => {
     expect(targetWidth('logo', 3840)).toBe(480);
     expect(targetWidth('shot', 1920)).toBe(1600);
+  });
+
+  it('caps portraits at 1200px', () => {
+    expect(targetWidth('portrait', 4000)).toBe(1200);
   });
 
   it('never upscales', () => {

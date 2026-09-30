@@ -41,9 +41,20 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+/** Runs before paint: marks the page as animatable unless the visitor prefers reduced motion. */
+const motionScript =
+  "try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion-ok')}catch(e){}";
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${hand.variable}`}>
+    // The inline script adds a class before hydration, so the <html> class differs by design.
+    <html lang="en" className={`${sans.variable} ${hand.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static, first-party inline script
+          dangerouslySetInnerHTML={{ __html: motionScript }}
+        />
+      </head>
       <body className="bg-white font-sans text-ink antialiased">{children}</body>
     </html>
   );

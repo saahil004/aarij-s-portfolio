@@ -12,7 +12,7 @@ export function About({ content }: { content: SectionContent<'about'> }) {
     <Section id="about" className="border-t border-ink">
       <div className="grid gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
         <div>
-          <h2 id="about-title" className="text-title">
+          <h2 id="about-title" data-reveal-title className="text-title">
             {content.title}
           </h2>
           {content.highlights.length > 0 && (

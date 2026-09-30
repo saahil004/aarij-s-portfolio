@@ -19,7 +19,11 @@ export function ContactSection({
         >
           <MessageCircleMore className="size-5" strokeWidth={1.5} />
         </span>
-        <h2 id="contact-title" className="mt-8 max-w-[13ch] text-display text-white">
+        <h2
+          id="contact-title"
+          data-reveal-title
+          className="mt-8 max-w-[13ch] text-display text-white"
+        >
           {content.title}
         </h2>
         <p className="mt-6 max-w-lg text-lead text-white/75">{content.text}</p>

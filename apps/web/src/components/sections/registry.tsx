@@ -21,7 +21,7 @@ import type { HomeData } from './types';
 export function renderSection(section: SectionRecord, data: HomeData): ReactNode {
   switch (section.key) {
     case 'hero':
-      return <Hero content={section.content} settings={data.settings} />;
+      return <Hero content={section.content} settings={data.settings} metrics={data.metrics} />;
     case 'ticker':
       return <Ticker content={section.content} />;
     case 'funnel':

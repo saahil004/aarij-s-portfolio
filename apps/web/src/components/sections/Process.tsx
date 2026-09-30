@@ -13,7 +13,7 @@ export function Process({ content }: { content: SectionContent<'process'> }) {
     <Section id="process">
       <div className="grid gap-12 md:grid-cols-2 md:gap-16">
         <div className="md:sticky md:top-28 md:self-start">
-          <h2 id="process-title" className="max-w-[15ch] text-title">
+          <h2 id="process-title" data-reveal-title className="max-w-[15ch] text-title">
             {content.title}
           </h2>
           <p className="mt-5 max-w-md text-lead text-grey-600">

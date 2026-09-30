@@ -1,5 +1,6 @@
 'use client';
 
+import { m, useReducedMotion } from 'motion/react';
 import { useEffect, useId, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { ContactForm } from './ContactForm';
@@ -16,6 +17,7 @@ export function ContactPanel({
 }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
+  const reduceMotion = useReducedMotion();
 
   // Links to #contact (nav, hero, badge) open the form directly.
   useEffect(() => {
@@ -35,7 +37,13 @@ export function ContactPanel({
   return (
     <>
       <div className="relative mt-10 inline-flex">
-        <Button variant="light" aria-expanded={open} aria-controls={panelId} onClick={openForm}>
+        <Button
+          variant="light"
+          aria-expanded={open}
+          aria-controls={panelId}
+          onClick={openForm}
+          magnetic
+        >
           {buttonLabel}
         </Button>
         <span
@@ -61,9 +69,20 @@ export function ContactPanel({
         </span>
       </div>
 
-      <div id={panelId} hidden={!open} className="mx-auto mt-12 w-full max-w-3xl">
-        <ContactForm email={email} />
-      </div>
+      {/* Height animates open; while closed the form is inert and hidden from assistive tech. */}
+      <m.div
+        id={panelId}
+        initial={false}
+        animate={open ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+        transition={{ duration: reduceMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] }}
+        aria-hidden={!open}
+        inert={!open}
+        className="mx-auto w-full max-w-3xl overflow-hidden"
+      >
+        <div className="pt-12">
+          <ContactForm email={email} />
+        </div>
+      </m.div>
     </>
   );
 }

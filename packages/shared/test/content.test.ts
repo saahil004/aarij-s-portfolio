@@ -55,6 +55,11 @@ describe('sections', () => {
     expect(() => parseSection('ticker', { items: [] })).toThrow();
   });
 
+  it('limits hero proof metrics to two', () => {
+    const result = sectionSchemas.hero.shape.proofMetricIds.safeParse(['a', 'b', 'c']);
+    expect(result.success).toBe(false);
+  });
+
   it('limits hero stickers to two', () => {
     const result = sectionSchemas.hero.shape.stickers.safeParse(['a', 'b', 'c']);
     expect(result.success).toBe(false);

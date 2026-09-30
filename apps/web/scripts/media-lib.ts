@@ -1,8 +1,13 @@
 export type Rgb = { r: number; g: number; b: number };
 export type Rgba = Rgb & { a: number };
-export type MediaKind = 'logo' | 'shot';
+export type MediaKind = 'logo' | 'shot' | 'portrait';
 
-const MAX_WIDTH: Record<MediaKind, number> = { logo: 480, shot: 1600 };
+const MAX_WIDTH: Record<MediaKind, number> = { logo: 480, shot: 1600, portrait: 1200 };
+
+/** First path for which `exists` is true, e.g. the portrait in whichever format was dropped in. */
+export function firstExisting(candidates: string[], exists: (path: string) => boolean) {
+  return candidates.find(exists) ?? null;
+}
 
 export function toHex({ r, g, b }: Rgb): string {
   return `#${[r, g, b].map((c) => Math.round(c).toString(16).padStart(2, '0')).join('')}`;

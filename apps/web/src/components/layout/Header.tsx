@@ -40,7 +40,7 @@ export function Header({ settings, links }: { settings: SiteSettings; links: Nav
             </a>
           ))}
           {settings.socials.length === 0 && (
-            <Button href="/#contact" className="min-h-9 px-3.5 py-2">
+            <Button href="/#contact" className="min-h-9 px-3.5 py-2" magnetic>
               Let&apos;s Talk
             </Button>
           )}

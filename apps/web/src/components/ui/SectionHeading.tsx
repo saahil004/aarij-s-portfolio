@@ -32,7 +32,7 @@ export function SectionHeading({
   if (align === 'center') {
     return (
       <div className={cn('mx-auto max-w-2xl text-center', className)}>
-        <h2 id={id} className={cn('text-title', dark && 'text-white')}>
+        <h2 id={id} data-reveal-title className={cn('text-title', dark && 'text-white')}>
           {title}
         </h2>
         {introText && <div className="mx-auto mt-4 max-w-xl">{introText}</div>}
@@ -43,7 +43,7 @@ export function SectionHeading({
 
   return (
     <div className={cn('grid gap-5 md:grid-cols-2 md:gap-12 lg:gap-24', className)}>
-      <h2 id={id} className={cn('max-w-[15ch] text-title', dark && 'text-white')}>
+      <h2 id={id} data-reveal-title className={cn('max-w-[15ch] text-title', dark && 'text-white')}>
         {title}
       </h2>
       {(introText || children) && (

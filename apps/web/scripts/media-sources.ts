@@ -2,6 +2,23 @@ import type { MediaKind } from './media-lib.ts';
 
 export type MediaSource = { from: string; to: string; kind: MediaKind };
 
+const portraitCandidates = (name: string) =>
+  ['jpg', 'jpeg', 'png', 'webp'].map((extension) => `portrait/${name}.${extension}`);
+
+/**
+ * Photos of Aarij. Drop `source-content/portrait/aarij.jpg` (or .jpeg/.png/.webp) in and
+ * re-run the import; the site picks it up automatically. `aarij-about` is an optional
+ * second photo for the About section. Missing files are skipped.
+ */
+export const optionalSources: { candidates: string[]; to: string; kind: MediaKind }[] = [
+  { candidates: portraitCandidates('aarij'), to: 'portrait/aarij.webp', kind: 'portrait' },
+  {
+    candidates: portraitCandidates('aarij-about'),
+    to: 'portrait/aarij-about.webp',
+    kind: 'portrait',
+  },
+];
+
 const logo = (from: string, to: string): MediaSource => ({ from, to, kind: 'logo' });
 const shot = (from: string, to: string): MediaSource => ({ from, to, kind: 'shot' });
 

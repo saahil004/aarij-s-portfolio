@@ -1,4 +1,8 @@
 import type { SectionRecord } from '@aarij/shared';
+import { hasMedia } from '../media';
+
+/** Optional second photo, produced by `media:import` from source-content/portrait/aarij-about.*. */
+const ABOUT_PHOTO = 'portrait/aarij-about.webp';
 
 /** Homepage sections in display order. Intros support `**bold**` emphasis. */
 export const sections: SectionRecord[] = [
@@ -13,6 +17,7 @@ export const sections: SectionRecord[] = [
       subheadline:
         'I build data-driven digital marketing strategies that turn search visibility and online traffic into measurable business growth.',
       stickers: ['Data-Driven', 'SEO-Led'],
+      proofMetricIds: ['top-ranking', 'lead-growth'],
       primaryCta: { label: 'View My Results', href: '#results' },
       resumeCtaLabel: 'Download Resume',
     },
@@ -337,7 +342,7 @@ export const sections: SectionRecord[] = [
         'Full-funnel thinking',
         'Clear reporting',
       ],
-      photo: null,
+      photo: hasMedia(ABOUT_PHOTO) ? { path: ABOUT_PHOTO, alt: 'Aarij at work' } : null,
     },
   },
   {

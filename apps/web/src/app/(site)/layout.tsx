@@ -5,6 +5,8 @@ import { navLinks } from '@/components/layout/nav-links';
 import { RotatingBadge } from '@/components/layout/RotatingBadge';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { SkipLink } from '@/components/layout/SkipLink';
+import { MotionLayer } from '@/components/motion/MotionLayer';
+import { MotionProvider } from '@/components/motion/MotionProvider';
 import { getPosts, getSection, getSiteSettings } from '@/content';
 
 export default async function SiteLayout({ children }: { children: ReactNode }) {
@@ -16,7 +18,7 @@ export default async function SiteLayout({ children }: { children: ReactNode }) 
   const showBlog = posts.length > 0;
 
   return (
-    <>
+    <MotionProvider>
       <SkipLink />
       <Header settings={settings} links={navLinks({ showBlog })} />
       <main id="main">{children}</main>
@@ -25,6 +27,7 @@ export default async function SiteLayout({ children }: { children: ReactNode }) 
         <SiteFooter settings={settings} showBlog={showBlog} />
       </div>
       <RotatingBadge text={settings.availability} />
-    </>
+      <MotionLayer />
+    </MotionProvider>
   );
 }

@@ -3,6 +3,17 @@
 The site only shows real, verifiable content. Anything below is either hidden until supplied or
 drafted from the evidence screenshots and needs Aarij's confirmation.
 
+## Adding Aarij's photo
+
+1. Save the photo as `source-content/portrait/aarij.jpg` (`.jpeg`, `.png` or `.webp` also work).
+   A well-lit, chest-up portrait works best; it is auto-cropped to the hero's 4:5 scallop,
+   centred on the face.
+2. Optional: a second photo as `source-content/portrait/aarij-about.jpg` for the About section.
+3. Run `pnpm --filter web media:import`, then commit the generated files in
+   `apps/web/public/media/portrait/` and `src/content/media-manifest.json`.
+
+The hero shows an "A" monogram until then.
+
 ## Needed before launch
 
 | Item | Where it shows | Status now |

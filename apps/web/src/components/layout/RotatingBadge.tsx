@@ -1,20 +1,23 @@
 import { Mail } from 'lucide-react';
 import Link from 'next/link';
 
-/** Meeko's circular "available" badge, fixed bottom-right. The text ring rotates. */
+/**
+ * Meeko's circular "available" badge, fixed bottom-right. The text ring rotates; its
+ * accessible name comes from real (visually hidden) text, not an aria-label.
+ */
 export function RotatingBadge({ text }: { text: string }) {
   const ring = `${text.toUpperCase()} · `;
   return (
     <Link
       href="/#contact"
       data-rotating-badge
-      aria-label={text}
       className="fixed right-3 bottom-3 z-40 flex size-17 items-center justify-center rounded-full border border-ink bg-yellow transition-transform duration-300 hover:scale-105 md:right-6 md:bottom-6 md:size-24"
     >
       <svg
         viewBox="0 0 100 100"
         aria-hidden="true"
         focusable="false"
+        data-badge-ring
         className="animate-badge-spin absolute inset-0 size-full"
       >
         <defs>
@@ -26,6 +29,7 @@ export function RotatingBadge({ text }: { text: string }) {
           </textPath>
         </text>
       </svg>
+      <span className="sr-only">{text}</span>
       <span className="relative flex size-7 items-center justify-center rounded-full border border-ink bg-white md:size-9">
         <Mail aria-hidden="true" className="size-4" strokeWidth={1.75} />
       </span>

@@ -33,7 +33,7 @@ export function Results({
               data-metric-prefix={metric.prefix}
               data-metric-suffix={metric.suffix}
               className={cn(
-                'text-outline text-[2.5rem] leading-none font-medium tracking-[-0.04em] tabular-nums md:text-[2.75rem]',
+                'text-outline inline-block text-[2.5rem] leading-none font-medium tracking-[-0.04em] tabular-nums md:text-[2.75rem]',
                 index % 2 === 0
                   ? '[--outline-color:var(--color-blue)]'
                   : '[--outline-color:var(--color-ink)]',

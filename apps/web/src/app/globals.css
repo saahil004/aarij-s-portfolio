@@ -251,6 +251,61 @@
   }
 }
 
+/* Lenis smooth scrolling (Phase 2 motion layer). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+/* Unlayered, so it wins over the base-layer `scroll-behavior: smooth` without !important. */
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/*
+ * Hero entrance. `motion-ok` is added by an inline head script only when the visitor allows
+ * motion, so the elements the intro animates start hidden instead of flashing. If the motion
+ * script never runs, the fallback animations reveal everything after 2.5s.
+ */
+@keyframes motion-fallback-show {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes motion-fallback-curtain {
+  to {
+    transform: translateY(-101%);
+  }
+}
+
+.motion-ok [data-hero-anim],
+.motion-ok [data-hand-pill],
+.motion-ok [data-rotating-badge] {
+  opacity: 0;
+  animation: motion-fallback-show 0s linear 2.5s forwards;
+}
+
+.motion-ok [data-scallop-curtain] {
+  display: block;
+  animation: motion-fallback-curtain 0.6s ease 2.5s forwards;
+}
+
+/* Pointer parallax: the motion layer sets --hero-px/--hero-py; --depth scales each layer. */
+[data-parallax] {
+  translate: calc(var(--hero-px, 0) * var(--depth, 1) * 1px)
+    calc(var(--hero-py, 0) * var(--depth, 1) * 1px);
+}
+
 /* Rotating availability badge — decorative, disabled for reduced motion. */
 @keyframes badge-spin {
   to {
